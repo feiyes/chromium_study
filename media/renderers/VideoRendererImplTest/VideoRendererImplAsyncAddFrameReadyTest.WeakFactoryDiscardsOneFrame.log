@@ -1,0 +1,113 @@
+feiyes@ubuntu:~/code/study/chromium/src$ ./out/Debug/media_unittests --gtest_filter=VideoRendererImplAsyncAddFrameReadyTest.WeakFactoryDiscardsOneFrame  --log --v=0 --vmodule=video_renderer_impl=4,decoder_stream=5,wall_clock_time_source=5,video_renderer_algorithm=5,ffmpeg_video_decoder=5,decoder_stream_traits=5
+IMPORTANT DEBUGGING NOTE: batches of tests are run inside their
+own process. For debugging a test inside a debugger, use the
+--gtest_filter=<your_test_name> flag along with
+--single-process-tests.
+Using sharding settings from environment. This is shard 0/1
+Using 1 parallel jobs.
+Note: Google Test filter = VideoRendererImplAsyncAddFrameReadyTest.WeakFactoryDiscardsOneFrame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VideoRendererImplAsyncAddFrameReadyTest
+[ RUN      ] VideoRendererImplAsyncAddFrameReadyTest.WeakFactoryDiscardsOneFrame
+###wangf###, ../../media/base/mock_filters.cc, MockDemuxerStream, 57
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, VideoRendererImplTest, 86
+###wangf###, ../../media/base/null_video_sink.cc, NullVideoSink, 27
+###wangf###, ../../media/renderers/video_renderer_impl.cc, VideoRendererImpl, 134
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, AdvanceWallclockTimeInMs, 302
+###wangf###, ../../media/base/test_helpers.cc, Normal, 196
+###wangf###, ../../media/base/test_helpers.cc, GetTestConfig, 148
+###wangf###, ../../media/base/mock_filters.cc, set_video_decoder_config, 93
+###wangf###, ../../media/base/decoder_buffer.cc, DecoderBuffer, 22
+###wangf###, ../../media/base/decoder_buffer.cc, Initialize, 77
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, TestBody, 1331
+###wangf###, ../../media/renderers/video_renderer_impl.cc, VideoRendererImpl, 134
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, Initialize, 116
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, InitializeWithLowDelay, 121
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, InitializeRenderer, 129
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetPipelineStatusCB, 92
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, CallInitialize, 143
+###wangf###, ../../media/renderers/video_renderer_impl.cc, Initialize, 216
+###wangf###, ../../media/base/mock_filters.cc, type, 63
+[5462:5462:0113/010747.409523:23764714822:VERBOSE1:decoder_stream.cc(115)] DecoderStream<video>
+###wangf###, ../../media/base/mock_filters.cc, liveness, 68
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+[5462:5462:0113/010747.411613:23764716885:VERBOSE1:decoder_stream.cc(152)] Initialize<video>
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, CreateVideoDecodersForTest, 65
+###wangf###, ../../media/base/mock_filters.cc, MockVideoDecoder, 105
+###wangf###, ../../media/base/mock_filters.cc, liveness, 68
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+[5462:5462:0113/010747.415873:23764721151:VERBOSE2:decoder_stream_traits.cc(162)] MockVideoDecoder
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+[5462:5462:0113/010747.417598:23764722872:VERBOSE1:decoder_stream.cc(331)] OnDecoderSelected<video>: MockVideoDecoder
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnStatisticsUpdate, 395
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnVideoDecoderStreamInitialized, 339
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, VideoRendererAlgorithm, 45
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Reset, 310
+###wangf###, ../../media/renderers/video_renderer_impl.cc, FinishInitialization, 362
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrames, 193
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrame, 225
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrame, 225
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrame, 225
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrame, 225
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, StartPlayingFrom, 157
+[5462:5462:0113/010747.429959:23764735245:VERBOSE1:wall_clock_time_source.cc(49)] SetMediaTime(0)
+[5462:5462:0113/010747.430596:23764735878:VERBOSE1:video_renderer_impl.cc(195)] StartPlayingFrom(0)
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptRead_Locked, 669
+###wangf###, ../../media/renderers/video_renderer_impl.cc, HaveReachedBufferingCap, 739
+[5462:5462:0113/010747.431686:23764736966:VERBOSE3:decoder_stream.cc(176)] Read<video>
+[5462:5462:0113/010747.431927:23764737206:VERBOSE3:decoder_stream.cc(641)] ReadFromDemuxerStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, AsHumanReadableString, 175
+[5462:5462:0113/010747.432558:23764737836:VERBOSE3:decoder_stream.cc(672)] OnBufferReady<video>: 0, timestamp=0 duration=0 size=0 side_data_size=0 is_key_frame=0 encrypted=0 discard_padding (us)=(0, 0)
+[5462:5462:0113/010747.434757:23764740086:VERBOSE3:decoder_stream.cc(431)] Decode<video>
+[5462:5462:0113/010747.435596:23764740900:VERBOSE3:decoder_stream.cc(456)] DecodeInternal<video>
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, DecodeRequested, 498
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, SatisfyPendingDecode, 267
+[5462:5462:0113/010747.437661:23764742942:VERBOSE3:decoder_stream.cc(590)] OnDecodeOutputReady<video>: 0 ms
+[5462:5462:0113/010747.438314:23764743594:VERBOSE3:decoder_stream.cc(942)] MaybePrepareAnotherOutput<video>
+[5462:5462:0113/010747.438929:23764744209:VERBOSE3:decoder_stream.cc(502)] OnDecodeDone<video>: DecodeStatus::OK
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, Flush, 167
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetClosure, 84
+[5462:5462:0113/010747.440280:23764745552:VERBOSE1:video_renderer_impl.cc(152)] Flush
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: Abort()
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#knowing-when-to-expect for details.
+[5462:5462:0113/010747.441269:23764746540:VERBOSE2:decoder_stream.cc(214)] Reset<video>
+[5462:5462:0113/010747.441549:23764746819:VERBOSE2:decoder_stream.cc(892)] ResetDecoder<video>
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, FlushRequested, 518
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Reset, 310
+###wangf###, ../../media/base/test_helpers.cc, RunAndWait, 99
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+[5462:5462:0113/010747.443296:23764748580:VERBOSE2:decoder_stream.cc(905)] OnDecoderReset<video>
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnVideoDecoderStreamResetDone, 695
+###wangf###, ../../media/renderers/video_renderer_impl.cc, FinishFlush, 370
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, Destroy, 175
+[5462:5462:0113/010747.447796:23764753072:VERBOSE1:decoder_stream.cc(120)] ~DecoderStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, ~DecoderBuffer, 71
+[       OK ] VideoRendererImplAsyncAddFrameReadyTest.WeakFactoryDiscardsOneFrame (53 ms)
+[----------] 1 test from VideoRendererImplAsyncAddFrameReadyTest (55 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (58 ms total)
+[  PASSED  ] 1 test.
+[1/1] VideoRendererImplAsyncAddFrameReadyTest.WeakFactoryDiscardsOneFrame (53 ms)
+SUCCESS: all tests passed.
+Tests took 1 seconds.
+feiyes@ubuntu:~/code/study/chromium/src$
+feiyes@ubuntu:~/code/study/chromium/src$
+feiyes@ubuntu:~/code/study/chromium/src$

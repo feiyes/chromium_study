@@ -1,0 +1,176 @@
+feiyes@ubuntu:~/code/study/chromium/src$ ./out/Debug/media_unittests --gtest_filter=VideoRendererImplTest.RenderingStopsAfterOneFrameWithEOS  --log --v=0 --vmodule=video_renderer_impl=4,decoder_stream=5,wall_clock_time_source=5,video_renderer_algorithm=5,ffmpeg_video_decoder=5,decoder_stream_traits=5
+IMPORTANT DEBUGGING NOTE: batches of tests are run inside their
+own process. For debugging a test inside a debugger, use the
+--gtest_filter=<your_test_name> flag along with
+--single-process-tests.
+Using sharding settings from environment. This is shard 0/1
+Using 1 parallel jobs.
+Note: Google Test filter = VideoRendererImplTest.RenderingStopsAfterOneFrameWithEOS
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VideoRendererImplTest
+[ RUN      ] VideoRendererImplTest.RenderingStopsAfterOneFrameWithEOS
+###wangf###, ../../media/base/mock_filters.cc, MockDemuxerStream, 57
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, VideoRendererImplTest, 86
+###wangf###, ../../media/base/null_video_sink.cc, NullVideoSink, 27
+###wangf###, ../../media/renderers/video_renderer_impl.cc, VideoRendererImpl, 134
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, AdvanceWallclockTimeInMs, 302
+###wangf###, ../../media/base/test_helpers.cc, Normal, 196
+###wangf###, ../../media/base/test_helpers.cc, GetTestConfig, 148
+###wangf###, ../../media/base/mock_filters.cc, set_video_decoder_config, 93
+###wangf###, ../../media/base/decoder_buffer.cc, DecoderBuffer, 22
+###wangf###, ../../media/base/decoder_buffer.cc, Initialize, 77
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, TestBody, 877
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, InitializeWithLowDelay, 121
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, InitializeRenderer, 129
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetPipelineStatusCB, 92
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, CallInitialize, 143
+###wangf###, ../../media/base/mock_filters.cc, set_liveness, 99
+###wangf###, ../../media/renderers/video_renderer_impl.cc, Initialize, 216
+###wangf###, ../../media/base/mock_filters.cc, type, 63
+[5380:5380:0113/005835.057319:23212362609:VERBOSE1:decoder_stream.cc(115)] DecoderStream<video>
+###wangf###, ../../media/base/mock_filters.cc, liveness, 68
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+[5380:5380:0113/005835.061035:23212366312:VERBOSE1:decoder_stream.cc(152)] Initialize<video>
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, CreateVideoDecodersForTest, 65
+###wangf###, ../../media/base/mock_filters.cc, MockVideoDecoder, 105
+###wangf###, ../../media/base/mock_filters.cc, liveness, 68
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+[5380:5380:0113/005835.065139:23212370418:VERBOSE2:decoder_stream_traits.cc(162)] MockVideoDecoder
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+[5380:5380:0113/005835.066894:23212372168:VERBOSE1:decoder_stream.cc(331)] OnDecoderSelected<video>: MockVideoDecoder
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnStatisticsUpdate, 395
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+###wangf###, ../../media/base/mock_filters.cc, GetDisplayName, 112
+###wangf###, ../../media/base/mock_filters.cc, video_decoder_config, 79
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnVideoDecoderStreamInitialized, 339
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, VideoRendererAlgorithm, 45
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Reset, 310
+###wangf###, ../../media/renderers/video_renderer_impl.cc, FinishInitialization, 362
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrames, 193
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, QueueFrame, 225
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetClosure, 84
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, StartPlayingFrom, 157
+[5380:5380:0113/005835.081403:23212386807:VERBOSE1:wall_clock_time_source.cc(49)] SetMediaTime(0)
+[5380:5380:0113/005835.082712:23212388021:VERBOSE1:video_renderer_impl.cc(195)] StartPlayingFrom(0)
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptRead_Locked, 669
+###wangf###, ../../media/renderers/video_renderer_impl.cc, HaveReachedBufferingCap, 739
+[5380:5380:0113/005835.085757:23212391038:VERBOSE3:decoder_stream.cc(176)] Read<video>
+[5380:5380:0113/005835.086619:23212391892:VERBOSE3:decoder_stream.cc(641)] ReadFromDemuxerStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, AsHumanReadableString, 175
+[5380:5380:0113/005835.087400:23212392736:VERBOSE3:decoder_stream.cc(672)] OnBufferReady<video>: 0, timestamp=0 duration=0 size=0 side_data_size=0 is_key_frame=0 encrypted=0 discard_padding (us)=(0, 0)
+[5380:5380:0113/005835.088875:23212394151:VERBOSE3:decoder_stream.cc(431)] Decode<video>
+[5380:5380:0113/005835.089603:23212394877:VERBOSE3:decoder_stream.cc(456)] DecodeInternal<video>
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, DecodeRequested, 498
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, SatisfyPendingDecode, 267
+[5380:5380:0113/005835.091896:23212397170:VERBOSE3:decoder_stream.cc(590)] OnDecodeOutputReady<video>: 0 ms
+###wangf###, ../../media/renderers/video_renderer_impl.cc, FrameReady, 494
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Reset, 310
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AddReadyFrame_Locked, 651
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, EnqueueFrame, 342
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, ReadyFrame, 23
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, UpdateEffectiveFramesQueued, 751
+###wangf###, ../../media/renderers/video_renderer_impl.cc, RemoveFramesForUnderflowOrBackgroundRendering, 845
+###wangf###, ../../media/renderers/video_renderer_impl.cc, MaybeFireEndedCallback_Locked, 768
+###wangf###, ../../media/renderers/video_renderer_impl.cc, UpdateStats_Locked, 710
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, GetMemoryUsage, 332
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnStatisticsUpdate, 395
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Render, 56
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, AccountForMissedIntervals, 441
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, UpdateFrameStatistics, 476
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, UpdateEffectiveFramesQueued, 751
+###wangf###, ../../media/renderers/video_renderer_impl.cc, CheckForMetadataChanges, 899
+###wangf###, ../../media/base/null_video_sink.cc, PaintSingleFrame, 97
+###wangf###, ../../media/renderers/video_renderer_impl.cc, HaveEnoughData_Locked, 592
+###wangf###, ../../media/renderers/video_renderer_impl.cc, HaveReachedBufferingCap, 739
+[5380:5380:0113/005835.100744:23212406024:VERBOSE3:video_renderer_impl.cc(617)] TransitionToHaveEnough_Locked
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptRead_Locked, 669
+###wangf###, ../../media/renderers/video_renderer_impl.cc, HaveReachedBufferingCap, 739
+[5380:5380:0113/005835.102031:23212407313:VERBOSE3:decoder_stream.cc(176)] Read<video>
+[5380:5380:0113/005835.102688:23212407965:VERBOSE3:decoder_stream.cc(502)] OnDecodeDone<video>: DecodeStatus::OK
+[5380:5380:0113/005835.102952:23212408233:VERBOSE3:decoder_stream.cc(641)] ReadFromDemuxerStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, AsHumanReadableString, 175
+[5380:5380:0113/005835.103315:23212408589:VERBOSE3:decoder_stream.cc(672)] OnBufferReady<video>: 0, timestamp=0 duration=0 size=0 side_data_size=0 is_key_frame=0 encrypted=0 discard_padding (us)=(0, 0)
+[5380:5380:0113/005835.103702:23212408985:VERBOSE3:decoder_stream.cc(431)] Decode<video>
+[5380:5380:0113/005835.103999:23212409283:VERBOSE3:decoder_stream.cc(456)] DecodeInternal<video>
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, DecodeRequested, 498
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnBufferingStateChange, 401
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnTimeProgressing, 433
+###wangf###, ../../media/renderers/video_renderer_impl.cc, StartSink, 750
+###wangf###, ../../media/base/null_video_sink.cc, Start, 35
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, SatisfyPendingDecodeWithEndOfStream, 283
+###wangf###, ../../media/base/decoder_buffer.cc, CreateEOSBuffer, 141
+###wangf###, ../../media/base/decoder_buffer.cc, DecoderBuffer, 31
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, WaitForPendingDecode, 251
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetClosure, 84
+###wangf###, ../../media/base/test_helpers.cc, RunAndWait, 99
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+###wangf###, ../../media/base/null_video_sink.cc, CallRender, 56
+###wangf###, ../../media/renderers/video_renderer_impl.cc, Render, 273
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, Render, 56
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, AccountForMissedIntervals, 441
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, UpdateFrameStatistics, 476
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, UpdateEffectiveFramesQueued, 751
+###wangf###, ../../media/renderers/video_renderer_impl.cc, MaybeFireEndedCallback_Locked, 768
+[5380:5380:0113/005835.107781:23212413060:VERBOSE3:decoder_stream.cc(502)] OnDecodeDone<video>: DecodeStatus::OK
+[5380:5380:0113/005835.108010:23212413282:VERBOSE3:decoder_stream.cc(641)] ReadFromDemuxerStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, AsHumanReadableString, 175
+[5380:5380:0113/005835.108210:23212413481:VERBOSE3:decoder_stream.cc(672)] OnBufferReady<video>: 0, EOS
+[5380:5380:0113/005835.108499:23212413776:VERBOSE3:decoder_stream.cc(431)] Decode<video>
+[5380:5380:0113/005835.108681:23212413954:VERBOSE3:decoder_stream.cc(456)] DecodeInternal<video>
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, DecodeRequested, 498
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptReadAndCheckForMetadataChanges, 921
+###wangf###, ../../media/renderers/video_renderer_impl.cc, CheckForMetadataChanges, 899
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptRead_Locked, 669
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, WaitForEnded, 242
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 75
+###wangf###, ../../media/base/test_helpers.cc, WaitableMessageLoopEvent, 70
+###wangf###, ../../media/base/test_helpers.cc, GetClosure, 84
+###wangf###, ../../media/base/test_helpers.cc, RunAndWait, 99
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+[5380:5380:0113/005835.110080:23212415355:VERBOSE3:decoder_stream.cc(502)] OnDecodeDone<video>: DecodeStatus::OK
+###wangf###, ../../media/renderers/video_renderer_impl.cc, FrameReady, 494
+###wangf###, ../../media/renderers/video_renderer_impl.cc, RemoveFramesForUnderflowOrBackgroundRendering, 845
+###wangf###, ../../media/renderers/video_renderer_impl.cc, MaybeFireEndedCallback_Locked, 768
+###wangf###, ../../media/renderers/video_renderer_impl.cc, UpdateStats_Locked, 710
+###wangf###, ../../media/renderers/video_renderer_impl.cc, AttemptRead_Locked, 669
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnPlaybackEnded, 383
+###wangf###, ../../media/renderers/video_renderer_impl.cc, UpdateStats_Locked, 710
+###wangf###, ../../media/filters/video_renderer_algorithm.cc, GetMemoryUsage, 332
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnStatisticsUpdate, 395
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl.cc, OnTimeStopped, 460
+###wangf###, ../../media/renderers/video_renderer_impl.cc, StopSink, 759
+###wangf###, ../../media/base/null_video_sink.cc, Stop, 47
+###wangf###, ../../media/base/test_helpers.cc, RunAndWait, 99
+###wangf###, ../../media/base/test_helpers.cc, RunAndWaitForStatus, 105
+###wangf###, ../../media/base/test_helpers.cc, OnCallback, 125
+###wangf###, ../../media/base/test_helpers.cc, ~WaitableMessageLoopEvent, 79
+###wangf###, ../../media/renderers/video_renderer_impl_unittest.cc, Destroy, 175
+[5380:5380:0113/005835.112054:23212417328:VERBOSE1:decoder_stream.cc(120)] ~DecoderStream<video>
+###wangf###, ../../media/base/decoder_buffer.cc, ~DecoderBuffer, 71
+###wangf###, ../../media/base/decoder_buffer.cc, ~DecoderBuffer, 71
+[       OK ] VideoRendererImplTest.RenderingStopsAfterOneFrameWithEOS (79 ms)
+[----------] 1 test from VideoRendererImplTest (80 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (84 ms total)
+[  PASSED  ] 1 test.
+[1/1] VideoRendererImplTest.RenderingStopsAfterOneFrameWithEOS (79 ms)
+SUCCESS: all tests passed.
+Tests took 2 seconds.
+feiyes@ubuntu:~/code/study/chromium/src$
+feiyes@ubuntu:~/code/study/chromium/src$
